@@ -1,0 +1,323 @@
+<html>
+<head>
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="index.css"/>
+<title>
+Zepta_Photography
+</title>
+<style>
+body{
+margin:0px
+
+}
+td.one{
+background-image:url(image3.jpg);
+background-repeat:no-repeat;
+margin:10px;
+border-radius:5px;
+
+}
+p.para3{
+background-image:url(snow.jpg);
+background-repeat:no-repeat;
+color:red;
+font-size:55px;
+font-style:cooper;
+padding:55px;
+height:90px;
+margin:10px;
+margin-bottom:2px;
+border-radius:5px;
+}
+ul.one{
+list-style:none;
+text-align:center;
+border-width:10px;
+border-radius:5px;
+background-color:grey;
+margin:10px;
+margin-top:0px;
+}
+ul.one li{
+font-size:20px;
+font-family:calibry;
+display:inline
+
+}
+ul.one li a{
+text-decoration:none;
+padding:65px;
+}
+ul.one li a:hover{
+color:orange;
+}
+p.para1{
+color:black;
+font-size:25px;
+back ground-image:url();
+text-align:left;
+line-height:1.5em;
+}
+p.para2{
+color:red;
+font-size:30px;
+font-style:italic;
+font-weight:bold;
+text-align:center;
+}
+ul.new{
+display:outline;
+font-size:20px;
+font-style:italic;
+color:white;
+}
+td.two{
+text-align:top;
+font-size:25px;
+font-weight:bold;
+color:#F5F5DC;
+background-image:url(image5.jpg);
+margin:10px;
+border-radius:5px;
+}
+p.para4{
+text-align:center;
+text-align:top;
+font-size:35px;
+color:;
+}
+td.three{
+margin:20px;
+border-radius:5px;
+background-image:url(image10.jpg);
+color:white;
+}
+img.map{
+border-radius:5px;
+}
+img.front{
+margin-bottom:20px;
+border-radius:10px;
+}
+.under{
+background-color:#273746;
+}
+p.para5{
+font-size:20px;
+font-weight:bold;
+}
+ul.new3{
+list-style:none;
+line-height:1.5em;
+}
+ul.new3 li a{
+color:white;
+text-decoration:none;
+font-size:15px;
+}
+ul.new3 li a:hover{
+color:black;
+}
+div.one{
+margin:70px;
+margin-top:20px;
+margin-bottom:20px;
+background-color:white;
+padding:10px;
+}
+p.intro{
+color:black;
+font-size:20px;
+margin-top:20px;
+}
+.slideshow{
+position:relative;
+margin:auto;
+width:1000px;
+}
+.number{
+position:absolute;
+padding:10px;
+color:white;
+font-size:20px;
+}
+.slides{
+display:none;
+}
+.prev, .next{
+position:absolute;
+top:50%;
+color:white;
+font-weight:bold;
+padding:10px;
+font-size:20px;
+border-radius:5px;
+cursor:pointer;
+}
+.next{
+right:0;
+border-radius:0 3px 3px 0;
+}
+.prev:hover, .next:hover{
+background:rgba(0,0,0,0.8);
+}
+.dots{
+width:7px;
+height:7px;
+display:inline-block;
+background:gray;
+padding:3px;
+border-radius:50px;
+cursor:pointer;
+}
+.fade{
+animation-name:fade;
+animation-duration:0.5s; 
+}
+@keyframes fade{
+from{opacity:0.4}
+to{opacity:1}
+}
+.active,.dots:hover{
+ 
+ background:#273E56;}
+
+</style>
+
+</head>
+<body bgcolor=black>
+<p class="para3">ZePta<br> Photography
+<font face=vedarna size=20 align-right=bottom color=gold><i>Sence of the life</f>
+</p>
+<ul class="one">
+<li><a href="index.html">Home</a></li>
+<li><a href="portfolio.html ">Portfolio</a></li>
+<li><a href="AboutUs.html">About</a></li>
+<li><a href="signIn.html">Sign in</a></li>
+<li><a href=" ">Contact<a></li>
+</ul>
+<div class="slideshow">
+
+<div class="slides fade">
+<div class="number">1/5</div>
+<div><center> <img src="image9.jpg"></center></div>
+</div>
+<div class="slides">
+<div class="number">2/5</div>
+<div><center> <img src="slide3.jpg "></center></div>
+</div>
+<div class="slides">
+<div class="number">3/5</div>
+<div><center> <img src="slide2.jpg "></center></div>
+</div>
+<div class="slides">
+<div class="number">4/5</div>
+<div><center> <img src="slide4.jpg "></center></div>
+</div>
+<div class="slides">
+<div class="number">5/5</div>
+<div><center> <img src="slide5.jpg "></center></div>
+</div>
+<a class="prev" onclick="plusIndex(-1)">&#10094;</a>
+<a class="next" onclick="plusIndex(+1)">&#10095;</a>
+
+</div>
+<div style="text-align:center;">
+<span class="dots" onclick="currentSlide(1)"></span>
+<span class="dots" onclick="currentSlide(2)"></span>
+<span class="dots" onclick="currentSlide(3)"></span>
+<span class="dots" onclick="currentSlide(4)"></span>
+<span class="dots" onclick="currentSlide(5)"></span>
+</div>
+<script type="text/javascript">
+
+var slideIndex=1;
+showImage(slideIndex);
+function plusIndex(n){
+showImage(slideIndex += n);
+}
+function currentSlide(n){
+showImage(slideIndex= n);
+}
+function showImage(n){
+var slide=document.getElementsByClassName("slides")
+    if(n>slide.length){slideIndex=1};
+    if(n<1) {slideIndex=slide.length};
+
+for(var i=0; i<slide.length;i++){
+slide[i].style.display="none";
+};
+slide[slideIndex-1].style.display="block";
+
+}
+</script>
+<div class="one">
+<p class="intro">ZePta photography is a place that recruit photographers and you can hire photographers.You can easily contact our crew through the web site.You have to log our page.Then you can apply as photographer or you can hire photographer for your choise.Our branches locate in all over the country.If you want any kind of photographer you want to contact us. </p>
+</div>
+
+<table cellspacing="20px">
+<tr>
+<td class="one">
+<p class="para1">Photography is a art that gives thousand words<br>to the everyone.<br>Because it gives memories of special moments<br>of life,memorable things that<br> close to heart.Actually there are things nobody<br> would see if didnot photogrph.  
+</p>
+<br>
+<p class="para2">Why you want be a PHOTOGRAPHER?
+</p>
+<ul class="new">
+<li><b>Sharing your vision.</b></li>
+<li><b>Being part of a community.</b></li>
+<li><b>Something to teach to kids.</b></li>
+<li><b>A way to help others and give back.</b></li>
+</ul>
+</td>
+
+<td class="two">
+To become a PHOTOGRAPHER,
+<ul class="new2">
+<li>Decide the path what you want.</li>
+<li>Practise to reinforce what you learned.</li>
+<li>Certify your achivement.</li>
+<li>Advance your carreer.</li>
+</ul>
+</td>
+
+<td class="three">
+<p class="para4">Locations of ZePta</p>
+<img class="map" src="image6.jpg" height="300px">
+</td>
+</tr>
+</table>
+
+<div class="under">
+<table class="quick">
+<tr class="last">
+<td class="four">
+<p class="para5">Quick Links</p>
+<ul class="new3">
+<li><a href=" ">Home</a></li>
+<li><a href=" ">Portfolio</a></li>
+<li><a href=" ">About</a></li>
+<li><a href=" ">Contact</a></li>
+<li><a href=" ">Sign in</a></li>
+</ul>
+</td>
+
+<td class="five">
+<ul class="new4">
+<li><a href=" #"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+
+<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+
+ 
+<li><a href="# "></i></a></li>
+<li><a href="# "></i>
+ </a></li>
+<li><a href="# "></i></a></li>
+</ul>
+</tr>
+</table>
+<div>
+
+
+
+</body>
